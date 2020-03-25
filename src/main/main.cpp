@@ -1,8 +1,8 @@
-#include "shared.h"
+#include "../../include/shared.h"
 
 int main() {
   f();
-  
+
   X x;
   x.mX();
 }

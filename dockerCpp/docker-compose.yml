@@ -1,0 +1,22 @@
+version: '3'
+services:
+        ubuntu_cpp:
+                build:
+                        context: ./
+                        dockerfile: Dockerfile_cpp
+                        args:
+                            git_user: Tianxiang
+                            git_email: TSu@slb.com
+                image: tianxiang84/cpp:bionic
+                container_name: ubuntu_cpp
+                stdin_open: true
+                tty: true
+                volumes:
+                        - ../:/home/TSu/cpp
+                        - /tmp/.X11-unix:/tmp/.X11-unix
+                env_file:
+                        - ubuntu_cpp.env
+                working_dir: /home/TSu/cpp
+                entrypoint:
+                  - /bin/bash
+                  - dockerCpp/entrypoint.sh
