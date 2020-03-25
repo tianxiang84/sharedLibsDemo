@@ -24,3 +24,11 @@ g++ -o bin\main.exe obj\main.o -Lbin -lshared -Wl,-rpath=bin (OR g++ -o bin\main
 g++ -fPIC -shared shared.cpp -o libshared.dll
 g++ -o main.exe main.cpp -L. -lshared -Wl,-rpath,.
 ./main.exe 
+
+
+CMake:
+mkdir build
+cd build
+cmake -G "MinGW Makefiles" ..
+mingw32-make 
+.\bin\main.exe

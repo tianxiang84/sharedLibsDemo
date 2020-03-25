@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tsu/Desktop/Projects/forkedRepo/sharedLibsDemo/include/shared.h
+
+C:/Users/tsu/Desktop/Projects/forkedRepo/sharedLibsDemo/src/main/main.cpp
+../../include/shared.h
+C:/Users/tsu/Desktop/Projects/forkedRepo/sharedLibsDemo/include/shared.h
+
