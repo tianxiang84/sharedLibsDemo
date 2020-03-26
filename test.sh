@@ -13,8 +13,8 @@ g++ -o -Llib -lshared bin/main src/main/main.cpp -Wl,-rpath=lib
 
 
 
-
+rm *.so || true &&
+rm main || true &&
 g++ -fPIC -shared shared.cpp -o libshared.so &&
-g++ -c -Wall -o main.o main.cpp &&
 g++ -o main main.cpp -L. -lshared -Wl,-rpath,. &&
-./main 
+./main
